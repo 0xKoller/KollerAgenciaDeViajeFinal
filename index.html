@@ -18,6 +18,8 @@
       integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
       crossorigin="anonymous"
     />
+    <link rel="icon" href="./media/logo_small.webp" type="image/icon type" />
+
     <title>Las Bardas</title>
   </head>
   <body>
@@ -25,7 +27,7 @@
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
           <a href="#" class="navbar-brand"
-            ><img src="./media/logo_small.webp" alt="" class="w-50"
+            ><img src="./media/logo_medium.webp" alt="" class="w-25"
           /></a>
           <button
             class="navbar-toggler"
@@ -96,68 +98,77 @@
         </div>
       </div>
     </section>
-    <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+    <div class="row text-center mt-4 mb-4">
       <div class="col">
-        <div class="card mb-4 rounded-3 shadow-sm">
+        <div class="card mb-4 rounded-3">
           <div class="card-body">
-            <h1 class="card-title pricing-card-title">Destinos</h1>
-            <ul class="list-unstyled mt-3 mb-4">
-              <li>10 users included</li>
-              <li>2 GB of storage</li>
-              <li>Email support</li>
-              <li>Help center access</li>
-            </ul>
-            <button type="button" class="w-100 btn btn-lg btn-outline-primary">
-              Sign up for free
-            </button>
+            <h1 class="card-title">Destinos</h1>
+            <p>
+              Aqui te mostraremos los destinos mas solicitados y mejor valorados
+              de la agencia
+            </p>
+            <a
+              class="btn w-100 btn-lg btn-outline-primary"
+              href="pages/destinos.html"
+              role="button"
+              >Visitar</a
+            >
           </div>
         </div>
       </div>
       <div class="col">
-        <div class="card mb-4 rounded-3 shadow-sm">
-          <div class="card-header py-3">
-            <h4 class="my-0 fw-normal">Pro</h4>
-          </div>
+        <div class="card mb-4 rounded-3">
           <div class="card-body">
-            <h1 class="card-title pricing-card-title">
-              $15<small class="text-muted fw-light">/mo</small>
-            </h1>
-            <ul class="list-unstyled mt-3 mb-4">
-              <li>20 users included</li>
-              <li>10 GB of storage</li>
-              <li>Priority email support</li>
-              <li>Help center access</li>
-            </ul>
-            <button type="button" class="w-100 btn btn-lg btn-primary">
-              Get started
-            </button>
+            <h1 class="card-title">Quinceañeras</h1>
+            <p>
+              Viaja con tus amigas a festejar tus quince años en el maravilloso
+              mundo de Disney y un crucero por Bahamas
+            </p>
+            <a
+              class="btn w-100 btn-lg btn-outline-primary align-"
+              href="pages/quince.html"
+              role="button"
+              >Visitar</a
+            >
           </div>
         </div>
       </div>
       <div class="col">
-        <div class="card mb-4 rounded-3 shadow-sm border-primary">
-          <div class="card-header py-3 text-white bg-primary border-primary">
-            <h4 class="my-0 fw-normal">Enterprise</h4>
-          </div>
+        <div class="card mb-4 rounded-3">
           <div class="card-body">
-            <h1 class="card-title pricing-card-title">
-              $29<small class="text-muted fw-light">/mo</small>
-            </h1>
-            <ul class="list-unstyled mt-3 mb-4">
-              <li>30 users included</li>
-              <li>15 GB of storage</li>
-              <li>Phone and email support</li>
-              <li>Help center access</li>
-            </ul>
-            <button type="button" class="w-100 btn btn-lg btn-primary">
-              Contact us
-            </button>
+            <h1 class="card-title">Nosotros</h1>
+            <p>
+              ¿Queres saber un poco de como se fundo y que nos impulsa a seguir?
+              Aca te contamos
+            </p>
+            <a
+              class="btn w-100 btn-lg btn-outline-primary"
+              href="pages/nosotros.html"
+              role="button"
+              >Visitar</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3">
+          <div class="card-body">
+            <h1 class="card-title">Contacto</h1>
+            <p>
+              Si queres algun paquete o armar el tuyo, ponete en contacto con
+              nosotros.
+            </p>
+            <a
+              class="btn w-100 btn-lg btn-outline-primary"
+              href="pages/contacto.html"
+              role="button"
+              >Visitar</a
+            >
           </div>
         </div>
       </div>
     </div>
-
-    <footer>
+    <footer class="mt-5">
       <div class="container-fluid">
         <div class="row">
           <div class="d-flex justify-content-evenly">
@@ -171,15 +182,18 @@
                 </div>
                 <form action="" method="POST">
                   <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label"
-                      >Correo electronico</label
-                    >
                     <input
                       type="email"
                       class="form-control"
                       id="exampleInputEmail1"
+                      placeholder="nombre@email.com"
                       aria-describedby="emailHelp"
                     />
+                  </div>
+                  <div class="container d-flex justify-content-center">
+                    <button type="submit" class="btn btn-primary">
+                      Suscribite
+                    </button>
                   </div>
                 </form>
               </div>

@@ -18,14 +18,15 @@
       integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
       crossorigin="anonymous"
     />
+    <link rel="icon" href="../media/logo_small.webp" type="image/icon type" />
     <title>Las Bardas</title>
   </head>
   <body>
     <header>
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-          <a href="#" class="navbar-brand"
-            ><img src="./media/logo_small.webp" alt="" class="w-50"
+          <a href="/index.html" class="navbar-brand"
+            ><img src="../media/logo_medium.webp" alt="" class="w-25"
           /></a>
           <button
             class="navbar-toggler"
@@ -41,32 +42,56 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link" href="../index.html">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="./pages/destinos.html">Destinos</a>
+                <a class="nav-link" href="destinos.html">Destinos</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="./pages/quince.html">Quinceañeras</a>
+                <a class="nav-link" href="quince.html">Quinceañeras</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="./pages/nosotros.html">Nosotros</a>
+                <a class="nav-link active" aria-current="page" href="#"
+                  >Nosotros</a
+                >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="./pages/contacto.html">Contacto</a>
+                <a class="nav-link" href="contacto.html">Contacto</a>
               </li>
             </ul>
           </div>
         </div>
       </nav>
     </header>
-    
-    </section>
-    <article>
-      <div class="container-fluid"></div>
-    </article>
-
-    <footer>
+    <div class="container">
+      <div class="row d-flex justify-content-center align-items-center">
+        <div class="col">
+          <h2>La Empresa</h2>
+          <p>
+            Somos una empresa familiar que nos dedicamos desde hace casi 30 años
+            a vender programas turísticos.<br /><br />
+            Cabe destacar nuestras salidas anuales a Disney que ya son un
+            clásico acompañadas de Neuquén y coordinada por un plantel muy
+            experimentado. También New York es un clásico cómo así también
+            muchos destinos de Europa y hemos incursionado en todos los destinos
+            exóticos África, sudeste asiático, China Japón india dónde
+            indudablemente nuestro conocimiento del destino hace que sea un
+            producto destacado.<br />
+            <br />Somos una empresa apasionada por el mundo y así lo demostramos
+            en nuestros viajes.
+          </p>
+        </div>
+        <div class="col">
+          <img
+            src="../media/logo_who.webp"
+            class="img-fluid"
+            alt=""
+            srcset=""
+          />
+        </div>
+      </div>
+    </div>
+    <footer class="mt-5">
       <div class="container-fluid">
         <div class="row">
           <div class="d-flex justify-content-evenly">
@@ -80,15 +105,18 @@
                 </div>
                 <form action="" method="POST">
                   <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label"
-                      >Correo electronico</label
-                    >
                     <input
                       type="email"
                       class="form-control"
                       id="exampleInputEmail1"
+                      placeholder="nombre@email.com"
                       aria-describedby="emailHelp"
                     />
+                  </div>
+                  <div class="container d-flex justify-content-center">
+                    <button type="submit" class="btn btn-primary">
+                      Suscribite
+                    </button>
                   </div>
                 </form>
               </div>
