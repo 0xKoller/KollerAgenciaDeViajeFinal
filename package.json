@@ -1,0 +1,29 @@
+{
+  "name": "proyectofinal",
+  "version": "1.0.0",
+  "description": "Agencia de Viajes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "node-sass --include-path scss scss/style.scss css/style.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoseLuisKoller/KollerAgenciaDeViajeFinal.git"
+  },
+  "author": "Jose Luis Koller",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JoseLuisKoller/KollerAgenciaDeViajeFinal/issues"
+  },
+  "homepage": "https://github.com/JoseLuisKoller/KollerAgenciaDeViajeFinal#readme",
+  "devDependencies": {
+    "node": "^16.1.0",
+    "nodemon": "^2.0.7"
+  },
+  "dependencies": {
+    "bootstrap-icons": "^1.5.0",
+    "tailwindcss": "^2.1.2"
+  }
+}
