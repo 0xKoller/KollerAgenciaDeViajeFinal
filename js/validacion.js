@@ -11,7 +11,8 @@ form.addEventListener("submit", (e) => {
     Swal.fire({
       icon: "error",
       title: "Oops...",
-      text: "Recuerda de colocar un email valido!",
+      confirmButtonColor: "#c61616",
+      text: "¡Recuerda de colocar un email valido!",
     });
   } else {
     flagEmail = true;
@@ -24,7 +25,8 @@ form.addEventListener("submit", (e) => {
     Swal.fire({
       icon: "error",
       title: "Oops...",
-      text: "Recuerda de colocar un telefono valido!",
+      confirmButtonColor: "#c61616",
+      text: "¡Recuerda de colocar un telefono valido!",
     });
   } else {
     flagPhone = true;
