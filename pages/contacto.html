@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="description"
+      content="Agencia de viajes ubicada en la ciudad de Neuquen, Neuquen, Argentina. Ofrece paquetes de viajes a todo el mundo y venta de paquetes personalizados, ademas es puede concurrir para solicitar pasajes aereos o reservas de hospedaje."
+    />
+    <meta
+      name="keywords"
+      content="Neuquen, Agencia de Viaje, Viajes, Hospeda, Disney, Dubai, Estados Unidos, Europa, Avion, Turismo"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="icon" href="../media/logo_small.webp" type="image/icon type" />
+    <script defer src="../js/cotizacion.js" ></script>
+    <script defer src="../js/validacion.js" ></script>
+    <title>Las Bardas</title>
+  </head>
+  <body>
+    <header>
+      <nav
+        class="
+          navbar navbar-expand-lg navbar-light
+          bg-transparent
+          justify-content-evenly ps-3 pe-3
+        "
+      >
+        <div class="row align-items-center">
+          <div class="col text-start  d-none d-sm-block">
+            <a href="../index.html" class="navbar-brand"
+              ><img src="../media/logo_medium.webp" alt="Logo de Las Bardas - Agencia de Turismo" class="w-50"
+            /></a>
+          </div>
+          
+          <div class="col d-block d-sm-none">
+            <a href="../index.html" class="navbar-brand"
+              ><img src="../media/logo_small.webp" alt="Logo de Las Bardas - Agencia de Turismo" class="w-50"
+            /></a>
+          </div>
+          <div class="col text-end
+          ">
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="../index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="/pages/destinos.html"
+                    >Destinos</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link " href="quince.html">Quinceañeras</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link " href="nosotros.html">Nosotros</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="">Contacto</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col text-center d-none d-sm-block">
+            <p>💵 <span id="oficial">$precio</span> 💷 <span id="blue">$precio</span></p>             
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+    <section>
+      <div class="container mb-3 pt-1 mt-2">
+        <div class="justify-content-center">
+          <div class="">
+            <h4>📩 Envianos un mensaje...</h4>
+            <form action="/" method="GET" id='form'>
+              <div class="mb-3">
+                <label for="email" class="form-label mb-0 mt-1"
+                  >Correo Electronico</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="email"
+                  placeholder="nombre@email.com"
+                  aria-describedby="emailHelp"
+                  required
+                />
+              </div>
+              <div class="row">
+                <div class="col">
+                  <label for="nombre" class="form-label mb-0 mt-1"
+                    >Nombre</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="nombre"
+                    placeholder="José Luis"
+                    required
+                  />
+                </div>
+                <div class="col">
+                  <label for="apellido" class="form-label mb-0 mt-1"
+                    >Apellido</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="apellido"
+                    placeholder="Koller"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <label for="telefono" class="form-label mb-0 mt-1"
+                    >Telefono</label
+                  >
+                  <input
+                    type="tel"
+                    class="form-control"
+                    id="telefono"
+                    placeholder="0810 111 1111"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="row">
+                <div class="form-floating mt-4 mb-4">
+                  <textarea
+                    class="form-control"
+                    placeholder="Leave a comment here"
+                    id="floatingTextarea2"
+                    style="height: 150px"
+                    required
+                  ></textarea>
+                  <label for="floatingTextarea2"
+                    >Contanos que destino te interesa...</label
+                  >
+                </div>
+              </div>
+              <div class="row ms-0 me-0">
+                <button type="submit" class="btn btn-primary">Enviar</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <aside>
+      <div class="container mb-3">
+        <h4>📍 Donde podes encontrarnos de Lun - Vie entre 09:00 - 16:00</h2>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3102.7374951733673!2d-68.06469068419715!3d-38.95282497956218!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x960a33cef5b7cff1%3A0x80483ab999c3c3f6!2sLas%20Bardas%20Empresa%20de%20Viajes%20y%20Turismo!5e0!3m2!1ses-419!2sar!4v1622558491165!5m2!1ses-419!2sar"
+          width="600"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          class="w-100"
+        ></iframe>
+      </div>
+    </aside>
+  </main>
+    <footer class="container-fluid mt-auto">
+      <hr>
+      <div class="row">
+        <div class="">
+          <div class="d-flex justify-content-evenly">
+            <h4>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="30"
+                height="30"
+                fill="currentColor"
+                class="bi bi-newspaper"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M0 2.5A1.5 1.5 0 0 1 1.5 1h11A1.5 1.5 0 0 1 14 2.5v10.528c0 .3-.05.654-.238.972h.738a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 1 1 0v9a1.5 1.5 0 0 1-1.5 1.5H1.497A1.497 1.497 0 0 1 0 13.5v-11zM12 14c.37 0 .654-.211.853-.441.092-.106.147-.279.147-.531V2.5a.5.5 0 0 0-.5-.5h-11a.5.5 0 0 0-.5.5v11c0 .278.223.5.497.5H12z"
+                />
+                <path
+                  d="M2 3h10v2H2V3zm0 3h4v3H2V6zm0 4h4v1H2v-1zm0 2h4v1H2v-1zm5-6h2v1H7V6zm3 0h2v1h-2V6zM7 8h2v1H7V8zm3 0h2v1h-2V8zm-3 2h2v1H7v-1zm3 0h2v1h-2v-1zm-3 2h2v1H7v-1zm3 0h2v1h-2v-1z"
+                />
+              </svg>
+              Newsletter
+            </h4>
+          </div>
+          <div class="d-flex justify-content-evenly">
+            <p>Todas nuestras noticias en nuestro NewsLetter</p>
+          </div>
+          <div class="container">
+            <form action="" method="POST">
+              <div class="mb-3">
+                <input
+                  type="email"
+                  class="form-control"
+                  id="exampleInputEmail1"
+                  placeholder="nombre@email.com"
+                  aria-describedby="emailHelp"
+                />
+              </div>
+              <div class="container d-flex justify-content-center">
+                <button type="submit" class="btn btn-primary">
+                  Suscribite
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div class="row mt-3 pt-3">
+        <div class="d-flex justify-content-evenly">
+          <h4>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="30"
+              height="30"
+              fill="currentColor"
+              class="bi bi-chat-left-text"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H4.414A2 2 0 0 0 3 11.586l-2 2V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"
+              />
+              <path
+                d="M3 3.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3 6a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 6zm0 2.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z"
+              />
+            </svg>
+            Redes Sociales
+          </h4>
+        </div>
+      </div>
+        <div class="row ms-5 me-5 ps-5 pe-5 pb-3 pt-3 text-inline text-center">
+          <div class="col">
+            <a href="https://www.instagram.com/lasbardasviajes/">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="26"
+                height="26"
+                fill="black"
+                class="bi bi-instagram"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"
+                />
+              </svg>
+            </a>
+          </div>
+            <div class="col">
+            <a href="https://www.facebook.com/LasBardasViajesyTurismo"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="26"
+                height="26"
+                fill="black"
+                class="bi bi-facebook"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"
+                />
+              </svg>
+            </a>
+          </div>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div class="row mt-3">
+        <div class="col">
+          <div class="d-flex justify-content-center">
+            <h4>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="30"
+                height="30"
+                fill="currentColor"
+                class="bi bi-person-lines-fill"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5zm.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1h-4zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2z"
+                />
+              </svg>
+              Contacto
+            </h4>
+          </div>
+          <div class="d-flex justify-content-center">
+            <div>
+              <p>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-pin-map-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M3.1 11.2a.5.5 0 0 1 .4-.2H6a.5.5 0 0 1 0 1H3.75L1.5 15h13l-2.25-3H10a.5.5 0 0 1 0-1h2.5a.5.5 0 0 1 .4.2l3 4a.5.5 0 0 1-.4.8H.5a.5.5 0 0 1-.4-.8l3-4z"
+                  />
+                  <path
+                    fill-rule="evenodd"
+                    d="M4 4a4 4 0 1 1 4.5 3.969V13.5a.5.5 0 0 1-1 0V7.97A4 4 0 0 1 4 3.999z"
+                  />
+                </svg>
+                Carlos H.Rodríguez 253, Neuquén
+              </p>
+              <p>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-telephone-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"
+                  />
+                </svg>
+                0299 442-7551
+              </p>
+              <p>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-envelope-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z"
+                  />
+                </svg>
+                info@lasbardas.net
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="../node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>;
+  </body>
+</html>
