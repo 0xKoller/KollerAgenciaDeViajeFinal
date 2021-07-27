@@ -1,6 +1,4 @@
 function conversion(currency, cantidad) {
-  //Use la tasa de google, ojala estuviera eso el peso :(
-  //No use API todavia para evitar adelantar :D
   let ratio = 0;
   switch (currency) {
     case "USD":
@@ -32,16 +30,6 @@ function mostrar(nombre, dias, gastototal, personas, destino, moneda) {
       gastototal
   );
 }
-
-//Filtro mediante input
-$(document).ready(function () {
-  $("#myInput").on("keyup", function () {
-    let value = $(this).val().toLowerCase();
-    $("#myDIV .card").filter(function () {
-      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
-    });
-  });
-});
 
 //Cotizacion especifica
 function cotizar(destino) {
@@ -105,3 +93,13 @@ let botonGrec = document.getElementById("cotizarGrecia");
 botonGrec.addEventListener("click", () => cotizar("Grecia"));
 let botonPR = document.getElementById("cotizarPolRu");
 botonPR.addEventListener("click", () => cotizar("Polonia y Rusia"));
+
+//Filtro mediante input
+$(document).ready(function () {
+  $("#myInput").on("keyup", function () {
+    let value = $(this).val().toLowerCase();
+    $("#myDIV .card").filter(function () {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+    });
+  });
+});

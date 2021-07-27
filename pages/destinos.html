@@ -13,7 +13,7 @@
     content="Neuquen, Agencia de Viaje, Viajes, Hospeda, Disney, Dubai, Estados Unidos, Europa, Avion, Turismo"
   />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <script defer src="../js/cotizacion.js" ></script>
+ <script defer src="../js/cotizacion.js" ></script>
   <script defer src="../js/dolar.js" ></script>
   <link rel="stylesheet" href="../css/style.css" />
   <link rel="icon" href="../media/logo_small.webp" type="image/icon type" />
@@ -187,7 +187,6 @@
                             role="button" id="cotizarAfrica"
                             >Cotizalo</a
                           >
-                        
                          </div>
                        </div>
                     </div>
@@ -323,6 +322,31 @@
           </div>
         </div>
       </main>
+      <div class="container">
+        <div class="modal-bg">
+          <div class="modal">
+            <h3>Cotizacion</h3>
+            <label for="name">Nombre: </label>
+            <input type="text" name="name" id="nameInput">
+            <label for="companions">Acompañantes: </label>
+            <input type="number" name="companions" id="companionsInput">
+            <label for="days">Dias: </label>
+            <input type="number" name="days" id="daysInput">
+            <label for="destination">Destino: </label>
+            <div class="input-group-prepend">
+              <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</button>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+                <div role="separator" class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Separated link</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
       <footer class="container-fluid mt-auto">
         <hr>
         <div class="row">
@@ -505,8 +529,9 @@
               </div>
             </div>
           </div>
-          
         </div>
+      <div class="container">
+      </div>
       </footer>
       <script
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
