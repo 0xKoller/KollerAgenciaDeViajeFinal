@@ -181,7 +181,7 @@
                               Nacional de Serengueti, iremos a los Kopjes Ngorongoro y
                               disfrutaremos de las islas paradisiacas de Zanzibar.</p>
                             <p class="card-text"><small class="text-muted">Proxima Salida: 10/10/2021</small></p>
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                          <button type="button" class="btn  btn-lg btn-outline-primary" data-toggle="modal" data-target="#exampleModal">
                             Cotizalo
                           </button>
                          </div>
@@ -207,12 +207,9 @@
                             estaremos en Dubai, realizando un viaje cultural a traves del
                             tiempo por la ciudad.</p>
                           <p class="card-text"><small class="text-muted">Proxima Salida: 18/10/2021</small></p>
-                          <a
-                          class="btn btn-lg btn-outline-primary "
-                          href=""
-                          role="button" id="cotizarIndia"
-                          >Cotizalo</a
-                        >
+                          <button type="button" class="btn  btn-lg btn-outline-primary" data-toggle="modal" data-target="#exampleModal">
+                            Cotizalo
+                          </button>
                         </div>
                       </div>
                     </div>
@@ -236,12 +233,9 @@
                             encontraremos una de las 7 maravillas del mundo antiguo "El
                             coloso de Rodas".</p>
                           <p class="card-text"><small class="text-muted">Proxima Salida: 25/01/2022</small></p>
-                          <a
-                          class="btn btn-lg btn-outline-primary "
-                          href=""
-                          role="button" id="cotizarGrecia"
-                          >Cotizalo</a
-                        >
+                          <button type="button" class="btn  btn-lg btn-outline-primary" data-toggle="modal" data-target="#exampleModal">
+                            Cotizalo
+                          </button>
                         </div>
                       </div>
                     </div>
@@ -263,12 +257,9 @@
                             olvidemos del Kremlin, la antigua residencia de los zares rusos
                             y de la armeria.</p>
                           <p class="card-text"><small class="text-muted">Proxima Salida: 18/02/2022</small></p>
-                          <a
-                          class="btn btn-lg btn-outline-primary "
-                          href=""
-                          role="button" id="cotizarPolRu"
-                          >Cotizalo</a
-                        >
+                          <button type="button" class="btn  btn-lg btn-outline-primary" data-toggle="modal" data-target="#exampleModal">
+                            Cotizalo
+                          </button>
                         </div>
                       </div>
                     </div>
@@ -290,12 +281,9 @@
                             visitar el Air and Space Museum, la White House y el Capitolio.
                             Y no nos olvidemos de la gastronomia que experimentaremos</p>
                           <p class="card-text"><small class="text-muted">Proxima Salida: 18/12/2021</small></p>
-                          <a
-                          class="btn btn-lg btn-outline-primary "
-                          href=""
-                          role="button" id="cotizarNY"
-                          >Cotizalo</a
-                        >
+                          <button type="button" class="btn  btn-lg btn-outline-primary" data-toggle="modal" data-target="#exampleModal">
+                            Cotizalo
+                          </button>
                         </div>
                       </div>
                     </div>
@@ -320,7 +308,7 @@
         </div>
       </main>
       <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
+        <div class="modal-dialog modal-dialog-centered" role="document">
           <div class="modal-content">
             <div class="modal-header">
               <h5 class="modal-title" id="exampleModalLabel">Formulario ✍🏼</h5>
@@ -345,11 +333,11 @@
                 <div class="input-group">
                   <label class="input-group-text" for="location">Destino</label>
                   <select class="form-select" id="location">
-                    <option value="1">Africa</option>
-                    <option value="2">New York</option>
-                    <option value="3">India</option>
-                    <option value="4">Grecia</option>
-                    <option value="5">Polonia y Rusia</option>
+                    <option value="Africa">Africa</option>
+                    <option value="New York">New York</option>
+                    <option value="India">India</option>
+                    <option value="Grecia">Grecia</option>
+                    <option value="Polonia y Rusia">Polonia y Rusia</option>
                   </select>
                 </div>
               </div>
@@ -358,11 +346,11 @@
               <div class="row p-1" id="coin">
                 <div class="col">
                 <div class="input-group">
-                  <label class="input-group-text" for="currency">Destino</label>
+                  <label class="input-group-text" for="currency">Moneda</label>
                   <select class="form-select" id="currency">
-                    <option value="1">ARS</option>
-                    <option value="2">USD</option>
-                    <option value="3" disabled>BTC</option>
+                    <option value="ARS">ARS</option>
+                    <option value="USD">USD</option>
+                    <option value="BTC" disabled>BTC</option>
                   </select>
                 </div>
               </div>
@@ -371,25 +359,29 @@
               <div class="row p-1" id="days&companions">
                   <div class="col text-center">
                     <label for="companions">Acompañantes</label>
-                    <input type="number" min="0" max="6" name="days" value="1" id="companions">
+                    <input type="number" min="0" max="6" name="companions" value="1" id="companions">
                   </div>
                 <div class="col text-center">
                   <label for="days">Dias</label>
-                  <input type="number" min="0" max="30" name="days" value="7" id="days">
+                  <input type="number" min="1" max="30" name="days" value="7" id="days">
                 </div>
               </div>
+            </form>
               </div>
-              </form>
-              <div class="row d-flex m-3">
-                <div class="col d-flex justify-content-center">
-                <h5>Total: $</h5>
-                <span id="total">3</span>
+            <div class="modal-footer d-flex justify-content-center">
+              <div class="row text-center  align-items-center">
+                  <div class="col p-0 inline">
+                  <h5>Total $<span id="total">0</span></h5>
+                </div>
+                <div class="col">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>  
+                </div>
+                <div class="col">
+                  <a href="./contacto.html" class="btn btn-outline-primary">Contactanos</a>
+                </div>
               </div>
-              <div class="col text-end">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
             </div>
           </div>
-            </div>
         </div>
       </div>
       <footer class="container-fluid mt-auto">

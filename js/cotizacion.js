@@ -1,65 +1,61 @@
 function calculateValue(destination, currency, companions, days) {
   let priceDestination = 0;
-  currency = parseInt(currency);
-  companions = parseInt(companions);
+  companions = parseInt(companions) + 1;
   days = parseInt(days);
   switch (destination) {
-    case 1:
+    case "Africa":
       priceDestination = 150000;
       break;
-    case 2:
+    case "New York":
       priceDestination = 190000;
       break;
-    case 3:
+    case "India":
       priceDestination = 85000;
       break;
-    case 4:
+    case "Grecia":
       priceDestination = 120000;
       break;
-    case 5:
+    case "Polonia y Rusia":
       priceDestination = 250000;
       break;
     default:
-      priceDestination = 0;
       break;
   }
   switch (currency) {
-    case 2:
+    case "USD":
       priceDestination =
         priceDestination / parseInt(sessionStorage.getItem("dolar"));
       break;
     default:
       break;
   }
-  console.log(`moneda ${currency}`);
-  console.log(`acompañanates ${companions}`);
-  console.log(`dias ${days}`);
-  if (companions > 0) {
-    document.getElementById("total").innerHTML = Math.round(
-      priceDestination * companions * days
-    );
-  } else {
-    document.getElementById("total").innerHTML = priceDestination * days;
-  }
+  document.getElementById("total").innerHTML = Math.round(
+    priceDestination * companions * days
+  );
+  //
+  sessionStorage.setItem("nombre", document.getElementById("name").value);
+  sessionStorage.setItem("email", document.getElementById("contact").value);
 }
 
 //Variables
-let destinationValue = 1;
-let currencyValue = 1;
+let destinationValue = "Africa";
+let currencyValue = "USD";
 let companionsValue = 1;
 let daysValue = 1;
 
 //Destination
 const destinationText = document.getElementById("location");
 destinationText.addEventListener("click", () => {
-  destinationValue = parseInt(document.getElementById("location").value);
+  destinationValue = document.getElementById("location").value;
+  sessionStorage.setItem("destino", document.getElementById("location").value);
   calculateValue(destinationValue, currencyValue, companionsValue, daysValue);
 });
 
 //Currency
 const currencyText = document.getElementById("currency");
 currencyText.addEventListener("click", () => {
-  currencyValue = parseInt(document.getElementById("currency").value);
+  currencyValue = document.getElementById("currency").value;
+  sessionStorage.setItem("moneda", document.getElementById("currency").value);
   calculateValue(destinationValue, currencyValue, companionsValue, daysValue);
 });
 
@@ -67,6 +63,10 @@ currencyText.addEventListener("click", () => {
 const companionsText = document.getElementById("companions");
 companionsText.addEventListener("click", () => {
   companionsValue = parseInt(document.getElementById("companions").value);
+  sessionStorage.setItem(
+    "acompaniado",
+    document.getElementById("companions").value
+  );
   calculateValue(destinationValue, currencyValue, companionsValue, daysValue);
 });
 
@@ -74,9 +74,9 @@ companionsText.addEventListener("click", () => {
 const daysText = document.getElementById("days");
 daysText.addEventListener("click", () => {
   daysValue = parseInt(document.getElementById("days").value);
+  sessionStorage.setItem("dias", document.getElementById("days").value);
   calculateValue(destinationValue, currencyValue, companionsValue, daysValue);
 });
-calculateValue(destinationValue, currencyValue, companionsValue, daysValue);
 
 //Filtro mediante input
 $(document).ready(function () {
