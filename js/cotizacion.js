@@ -1,98 +1,82 @@
-function conversion(currency, cantidad) {
-  let ratio = 0;
-  switch (currency) {
-    case "USD":
-      ratio = 1 / parseInt(sessionStorage.getItem("dolar"));
+function calculateValue(destination, currency, companions, days) {
+  let priceDestination = 0;
+  currency = parseInt(currency);
+  companions = parseInt(companions);
+  days = parseInt(days);
+  switch (destination) {
+    case 1:
+      priceDestination = 150000;
       break;
-    case "BTC":
-      ratio = 1 / parseInt(sessionStorage.getItem("btc"));
+    case 2:
+      priceDestination = 190000;
+      break;
+    case 3:
+      priceDestination = 85000;
+      break;
+    case 4:
+      priceDestination = 120000;
+      break;
+    case 5:
+      priceDestination = 250000;
       break;
     default:
-      ratio = 1;
+      priceDestination = 0;
       break;
   }
-  return Math.round(cantidad * ratio);
-}
-
-function mostrar(nombre, dias, gastototal, personas, destino, moneda) {
-  alert(
-    "👋🏼 Hola " +
-      nombre +
-      " gracias por usar nuestro cotizador online a continuacion veras toda la informacion de tu destino seleccionado.\n✈ Destino: " +
-      destino +
-      "\n📆 Dias :" +
-      dias +
-      "\n👤 Acompañantes: " +
-      personas +
-      "\n💵 Total: $" +
-      moneda +
-      " " +
-      gastototal
-  );
-}
-
-//Cotizacion especifica
-function cotizar(destino) {
-  const nombre = prompt("✍🏼 Ingrese su nombre:");
-  if (nombre !== "" && nombre !== null && nombre !== " ") {
-    const divisas = ["USD", "EUR", "BTC", "ARS"];
-    let moneda = prompt(
-      "💵 Ingrese la moneda con la que desea pagar" + "\nUSD, EUR, BTC o ARS "
+  switch (currency) {
+    case 2:
+      priceDestination =
+        priceDestination / parseInt(sessionStorage.getItem("dolar"));
+      break;
+    default:
+      break;
+  }
+  console.log(`moneda ${currency}`);
+  console.log(`acompañanates ${companions}`);
+  console.log(`dias ${days}`);
+  if (companions > 0) {
+    document.getElementById("total").innerHTML = Math.round(
+      priceDestination * companions * days
     );
-    moneda = moneda.toUpperCase();
-    while (!divisas.includes(moneda)) {
-      moneda = prompt(
-        "💵 Ingrese UNA moneda VALIDA con la que desea pagar" +
-          "\nUSD, EUR, BTC o ARS"
-      );
-      moneda = moneda.toUpperCase();
-    }
-    let personas = prompt(
-      "👪 Ingrese la cantidad de personas con las que viajaria"
-    );
-
-    while (personas < 1) {
-      personas = prompt(
-        "👪 Ingrese UNA CANTIDAD de personas VALIDA con las que viajaria"
-      );
-    }
-    let dias = prompt("📆 Ingrese la cantidad de dias que va a viajar");
-    while (dias < 1) {
-      dias = prompt("📆 Ingrese UNA CANTIDAD de dias VALIDA que va a viajar");
-    }
-    switch (destino) {
-      case "Africa":
-        cantidad = 5000;
-        break;
-      case "Polonia y Rusia":
-        cantidad = 3000;
-        break;
-      case "India":
-        cantidad = 6000;
-        break;
-      case "New York":
-        cantidad = 2500;
-        break;
-      case "Grecia":
-        cantidad = 8000;
-        break;
-    }
-    const valor = conversion(moneda, cantidad);
-    const gastototal = conversion(moneda, cantidad) * personas;
-    mostrar(nombre, dias, gastototal, personas, destino, moneda);
+  } else {
+    document.getElementById("total").innerHTML = priceDestination * days;
   }
 }
 
-let botonNY = document.getElementById("cotizarNY");
-botonNY.addEventListener("click", () => cotizar("New York"));
-let botonAfr = document.getElementById("cotizarAfrica");
-botonAfr.addEventListener("click", () => cotizar("Africa"));
-let botonInd = document.getElementById("cotizarIndia");
-botonInd.addEventListener("click", () => cotizar("India"));
-let botonGrec = document.getElementById("cotizarGrecia");
-botonGrec.addEventListener("click", () => cotizar("Grecia"));
-let botonPR = document.getElementById("cotizarPolRu");
-botonPR.addEventListener("click", () => cotizar("Polonia y Rusia"));
+//Variables
+let destinationValue = 1;
+let currencyValue = 1;
+let companionsValue = 1;
+let daysValue = 1;
+
+//Destination
+const destinationText = document.getElementById("location");
+destinationText.addEventListener("click", () => {
+  destinationValue = parseInt(document.getElementById("location").value);
+  calculateValue(destinationValue, currencyValue, companionsValue, daysValue);
+});
+
+//Currency
+const currencyText = document.getElementById("currency");
+currencyText.addEventListener("click", () => {
+  currencyValue = parseInt(document.getElementById("currency").value);
+  calculateValue(destinationValue, currencyValue, companionsValue, daysValue);
+});
+
+//Companions
+const companionsText = document.getElementById("companions");
+companionsText.addEventListener("click", () => {
+  companionsValue = parseInt(document.getElementById("companions").value);
+  calculateValue(destinationValue, currencyValue, companionsValue, daysValue);
+});
+
+//Days
+const daysText = document.getElementById("days");
+daysText.addEventListener("click", () => {
+  daysValue = parseInt(document.getElementById("days").value);
+  calculateValue(destinationValue, currencyValue, companionsValue, daysValue);
+});
+calculateValue(destinationValue, currencyValue, companionsValue, daysValue);
 
 //Filtro mediante input
 $(document).ready(function () {
