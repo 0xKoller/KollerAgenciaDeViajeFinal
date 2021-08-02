@@ -33,7 +33,12 @@ form.addEventListener("submit", (e) => {
   }
   //Estas banderas y console log se usa nomas para demostrar que se enviaron los datos
   if (flagEmail == true && flagPhone == true) {
-    console.log("succesfull");
+    Swal.fire({
+      icon: "success",
+      title: "¡Muchas Gracias!",
+      confirmButtonColor: "#c61616",
+      text: "Recibimos todo lo que necesitamos, pronto estaremos en contacto",
+    });
   }
   e.preventDefault();
 });
